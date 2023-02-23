@@ -1,5 +1,5 @@
 export class User {
-  greet() {
-    return "Hello, World!";
+  greet(name: string) {
+    return `Hello, ${name}!`;
   }
 }
