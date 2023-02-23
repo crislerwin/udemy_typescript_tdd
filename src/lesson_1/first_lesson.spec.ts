@@ -1,4 +1,4 @@
-import { User } from "./main";
+import { User } from "./first_lesson";
 import { expect, test, describe } from "vitest";
 
 describe("User", () => {
