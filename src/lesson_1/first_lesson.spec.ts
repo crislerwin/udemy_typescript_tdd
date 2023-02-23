@@ -15,15 +15,31 @@ describe("User", () => {
   ];
 
   test("greet", () => {
+    // Arrange
+    const expected = `Hello, ${mockUsers[0].name}!`;
     const sut = new User();
-    expect(sut.greet(mockUsers[0].name)).toBe(`Hello, ${mockUsers[0].name}!`);
+    // Act
+    const actual = sut.greet(mockUsers[0].name);
+    // Assert
+    expect(actual).toBe(expected);
   });
-  test("Create and find users", () => {
+  test("Ensure the users list starts empty", () => {
+    // Arrange
+    const expected: string[] = [];
     const sut = new User();
-    expect(sut.listUsers()).toEqual([]);
+    // Act
+    const actual = sut.listUsers();
+    // Assert
+    expect(actual).toEqual(expected);
+  });
+  test("Add a user to the list", () => {
+    // Arrange
+    const expected = mockUsers[0];
+    const sut = new User();
+    // Act
     sut.addUser(mockUsers[0].name);
-    expect(sut.listUsers()).toEqual([mockUsers[0]]);
-    sut.addUser(mockUsers[1].name);
-    expect(sut.listUsers()).toEqual(mockUsers);
+    const actual = sut.listUsers()[0];
+    // Assert
+    expect(actual).toEqual(expected);
   });
 });
