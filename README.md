@@ -2,7 +2,47 @@
 
 ![typescript](https://img.shields.io/badge/typescript-4.9.5-blue) ![vitest](https://img.shields.io/badge/vitest-0.28.5-red) ![node](https://img.shields.io/badge/node-v18.12.0-green) ![pnpm](https://img.shields.io/badge/pnpm-7.26.2-yellow)
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Principles of TDD](#principles-of-tdd)
+- [TDD Process](#tdd-process)
+- [Getting Started with TDD](#getting-started-with-tdd)
+- [Conclusion](#conclusion)
+
+## Introduction
+
 Test-Driven Development (TDD) is a software development process that emphasizes writing automated tests before writing the code. The goal of TDD is to produce higher quality, more reliable code through a rigorous and iterative development process.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/en/) (v14.17.0 or higher)
+- [pnpm](https://pnpm.io/)
+- [Vitest](https://vitest.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Git](https://git-scm.com/)
+
+## Getting Started
+
+1. Clone the repository
+
+```bash
+git clone
+```
+
+2. Install dependencies
+
+```bash
+pnpm install
+```
+
+3. Run tests
+
+```bash
+pnpm test
+```
 
 ## Principles of TDD
 
