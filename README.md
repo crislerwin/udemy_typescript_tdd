@@ -18,6 +18,8 @@ Test-Driven Development (TDD) is a software development process that emphasizes 
 
 ## Prerequisites
 
+Observations: currently, I am using different tools to develop this project, Jest is replaced by Vitest, and Npm is replaced by Pnpm (I am using Pnpm because it is faster than Npm and Yarn) but feel free to use any other tools you want.
+
 - [Node.js](https://nodejs.org/en/) (v14.17.0 or higher)
 - [pnpm](https://pnpm.io/)
 - [Vitest](https://vitest.dev/)
