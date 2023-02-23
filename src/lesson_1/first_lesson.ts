@@ -1,13 +1,27 @@
-export class User {
-  private users: string[] = [];
+type Params = {
+  name: string;
+  id: number;
+};
+
+interface IUser {
+  greet(name: string): string;
+  addUser(name: string): void;
+  listUsers(): Params[];
+}
+
+export class User implements IUser {
+  private users: Params[] = [];
   greet(name: string) {
     return `Hello, ${name}!`;
   }
-  listUsers() {
-    return this.users;
+  addUser(name: string) {
+    this.users.push({
+      name,
+      id: this.users.length + 1,
+    });
   }
 
-  addUser(name: string) {
-    this.users.push(name);
+  listUsers() {
+    return this.users;
   }
 }
