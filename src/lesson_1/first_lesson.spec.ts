@@ -1,6 +1,5 @@
 import { User } from "./first_lesson";
 import { expect, test, describe } from "vitest";
-import { beforeEach } from "node:test";
 
 describe("User", () => {
   const mockUsers = [
