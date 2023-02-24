@@ -10,18 +10,19 @@ interface IUser {
 }
 
 export class User implements IUser {
-  private users: Params[] = [];
-  greet(name: string) {
-    return `Hello, ${name}!`;
+  user: Params;
+  private allUsers: Params[] = [];
+  greet() {
+    return `Hello, ${this.user.name}!`;
   }
-  addUser(name: string) {
-    this.users.push({
-      name,
-      id: this.users.length + 1,
-    });
+  addUser() {
+    this.allUsers.push({ ...this.user, id: this.allUsers.length + 1 });
   }
 
   listUsers() {
-    return this.users;
+    return this.allUsers;
+  }
+  constructor(user: Params) {
+    this.user = user;
   }
 }
