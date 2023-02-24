@@ -16,16 +16,16 @@ describe("User", () => {
   test("greet", () => {
     // Arrange
     const expected = `Hello, ${mockUsers[0].name}!`;
-    const sut = new User();
+    const sut = new User(mockUsers[0]);
     // Act
-    const actual = sut.greet(mockUsers[0].name);
+    const actual = sut.greet();
     // Assert
     expect(actual).toBe(expected);
   });
   test("Ensure the users list starts empty", () => {
     // Arrange
     const expected: string[] = [];
-    const sut = new User();
+    const sut = new User(mockUsers[0]);
     // Act
     const actual = sut.listUsers();
     // Assert
@@ -34,9 +34,9 @@ describe("User", () => {
   test("Add a user to the list", () => {
     // Arrange
     const expected = mockUsers[0];
-    const sut = new User();
+    const sut = new User(mockUsers[0]);
     // Act
-    sut.addUser(mockUsers[0].name);
+    sut.addUser();
     const actual = sut.listUsers()[0];
     // Assert
     expect(actual).toEqual(expected);
