@@ -10,6 +10,7 @@
 - [Principles of TDD](#principles-of-tdd)
 - [TDD Process](#tdd-process)
 - [Getting Started with TDD](#getting-started-with-tdd)
+- [First Principles](#first-principles)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -72,6 +73,51 @@ Refactor the code: Refactor the code to improve its quality and ensure that all 
 Repeat: Repeat the process with additional tests and functionality.
 Getting Started with TDD
 To get started with TDD, you will need to become familiar with a testing framework that supports TDD, such as Jest, Mocha, or PHPUnit. You will also need to become familiar with the TDD process and the principles behind it. Once you are comfortable with the process, you can begin practicing TDD on your own projects.
+
+## First Principles
+
+First principles of testing stand for
+
+- Fast
+- Isolated/Independent
+- Repeatable
+- Self-validating
+- thorough
+
+Bugs are introduced in the parts of code, which we usually don’t pay attention to, or places which are too hard to understand.
+
+_Fast_
+
+- The developer shouldn’t hesitate to run the run the unit tests at any point of their development cycle, even if there are thousands of unit tests. They should run and show you the desired output in a matter of seconds
+
+_Isolated/Independent_
+
+- For any given unit test, for its environment variables or for its setup. It should be independent of everything else should so that it results is not influenced by any other factor.
+- Should follow the [3 A’s of testing:Arrange, Act, Assert](https://xp123.com/articles/3a-arrange-act-assert/)
+- In some literature, it's also called as [Given, When, Then](https://martinfowler.com/bliki/GivenWhenThen.html)
+
+- Arrange
+  All the data should be provided to the test when you’re about to run the test and it should not depend on the environment you are running the tests
+- Act
+  Invoke the actual method under test
+- Assert
+  At any given point, a unit test should only assert one logical outcome, multiple physical asserts can be part of this physical assert, as long as they all act on the state of the same object.
+
+Preferably, don’t do any actions after the assert call
+
+_Repeatable_
+
+- tests should be repeatable and deterministic, their values shouldn’t change based on being run on different environments.
+
+- Each test should set up its own data and should not depend on any external factors to run its test
+
+_Self-validating_
+
+- you shouldn’t need to check manually, whether the test passed or not. The test should be able to tell you whether it passed or not.
+
+_Thorough_
+
+- The test should cover all the possible scenarios, and should not be limited to just the happy path.
 
 ## Conclusion
 
