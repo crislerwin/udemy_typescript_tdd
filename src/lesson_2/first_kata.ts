@@ -1,17 +1,23 @@
+export enum Move {
+  Rock = "Rock",
+  Paper = "Paper",
+  Scissors = "Scissors",
+}
+
 export class Game {
   private _count = 1;
   private _playerOneChoice = "";
   private _playerTwoChoice = "";
   private _resources = new Map();
 
-  addResource(key: string, value: string) {
+  addResource(key: Move, value: Move) {
     this._resources.set(key, value);
   }
 
-  playerOneChoice(value: string) {
+  playerOneChoice(value: Move) {
     this._playerOneChoice = value;
   }
-  playerTwoChoice(value: string) {
+  playerTwoChoice(value: Move) {
     this._playerTwoChoice = value;
   }
   playGame(): string {
